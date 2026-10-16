@@ -236,6 +236,7 @@ partial class Form1
         // dgvProducts
         //
         dgvProducts.AllowUserToAddRows = false;
+        dgvProducts.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
         dgvProducts.AllowUserToDeleteRows = false;
         dgvProducts.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         dgvProducts.BackgroundColor = SystemColors.Window;
@@ -252,6 +253,7 @@ partial class Form1
         //
         // lblCount
         //
+        lblCount.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
         lblCount.AutoSize = true;
         lblCount.Location = new Point(320, 320);
         lblCount.Name = "lblCount";
@@ -270,11 +272,11 @@ partial class Form1
         Controls.Add(txtSearch);
         Controls.Add(lblSearch);
         Controls.Add(grpProduct);
-        FormBorderStyle = FormBorderStyle.FixedSingle;
-        MaximizeBox = false;
+        MinimumSize = new Size(910, 385);
         Name = "Form1";
         StartPosition = FormStartPosition.CenterScreen;
         Text = "Frcistan 0.1 - Robot Parçası Stok Takibi";
+        WindowState = FormWindowState.Maximized;
         Load += Form1_Load;
         grpProduct.ResumeLayout(false);
         grpProduct.PerformLayout();
