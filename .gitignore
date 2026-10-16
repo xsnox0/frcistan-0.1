@@ -480,3 +480,7 @@ $RECYCLE.BIN/
 
 # Vim temporary swap files
 *.swp
+
+# Yayımlama ve kurulum çıktıları
+publish/
+kurulum-cikti/
