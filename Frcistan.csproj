@@ -6,6 +6,9 @@
     <Nullable>disable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
+    <ApplicationIcon>frcistan.ico</ApplicationIcon>
+    <!-- yayimlama ve kurulum ciktilari Solution Explorer'da gozukmesin -->
+    <DefaultItemExcludes>$(DefaultItemExcludes);publish\**;kurulum-cikti\**</DefaultItemExcludes>
   </PropertyGroup>
 
   <ItemGroup>

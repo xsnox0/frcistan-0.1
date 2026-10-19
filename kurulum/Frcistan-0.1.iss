@@ -1,7 +1,7 @@
 ﻿; Frcistan 0.1 kurulum dosyası (Inno Setup 6)
-; Önce programı yayımlayın:
-;   dotnet publish Frcistan.csproj -c Release -r win-x64 --self-contained true -p:PublishSingleFile=true -p:IncludeNativeLibrariesForSelfExtract=true -p:EnableCompressionInSingleFile=true -o publish
-; Sonra bu dosyayı derleyin (Inno Setup'ta açıp Compile ya da ISCC.exe ile).
+; Visual Studio'da projeye sağ tık > Yayımla > FolderProfile dediğinizde
+; bu dosya otomatik derlenir ve kurulum-cikti\Frcistan-0.1-Kurulum.exe oluşur.
+; (Elle derlemek için: önce yayımlayın, sonra bunu Inno Setup'ta açıp Compile.)
 
 [Setup]
 AppId={{6E2B6C1D-3F2A-4E8B-9C5A-0F1A2B3C4D51}
@@ -19,6 +19,12 @@ OutputBaseFilename=Frcistan-0.1-Kurulum
 Compression=lzma2
 SolidCompression=yes
 WizardStyle=modern
+; logo: kurulum dosyasının simgesi ve sihirbazdaki resimler (ekran ölçeğine göre uygun boyut seçilir)
+SetupIconFile=..\frcistan.ico
+WizardImageFile=sihirbaz-100.bmp,sihirbaz-125.bmp,sihirbaz-150.bmp,sihirbaz-175.bmp,sihirbaz-200.bmp,sihirbaz-250.bmp
+WizardSmallImageFile=sihirbaz-kucuk-100.bmp,sihirbaz-kucuk-125.bmp,sihirbaz-kucuk-150.bmp,sihirbaz-kucuk-175.bmp,sihirbaz-kucuk-200.bmp,sihirbaz-kucuk-250.bmp
+; hoş geldiniz sayfası açık olsun ki büyük resim başta da görünsün
+DisableWelcomePage=no
 ArchitecturesAllowed=x64compatible
 ArchitecturesInstallIn64BitMode=x64compatible
 UninstallDisplayIcon={app}\Frcistan.exe

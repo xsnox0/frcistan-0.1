@@ -5,20 +5,19 @@
 CREATE DATABASE IF NOT EXISTS frcistan01 CHARACTER SET utf8mb4;
 USE frcistan01;
 
-CREATE TABLE IF NOT EXISTS Products (
+CREATE TABLE IF NOT EXISTS Urunler (
     Id INT AUTO_INCREMENT PRIMARY KEY,
-    Brand VARCHAR(50) NOT NULL,
-    Sku VARCHAR(50) NOT NULL UNIQUE,
-    Name VARCHAR(100) NOT NULL,
-    Quantity INT NOT NULL DEFAULT 0,
-    Price DECIMAL(10,2) NOT NULL DEFAULT 0
+    Marka VARCHAR(50) NOT NULL,
+    UrunAdi VARCHAR(100) NOT NULL,
+    Adet INT NOT NULL DEFAULT 0,
+    Fiyat DECIMAL(10,2) NOT NULL DEFAULT 0
 );
 
--- Örnek ürünler (fiyatlar örnektir)
-INSERT IGNORE INTO Products (Brand, Sku, Name, Quantity, Price) VALUES
-('REV Robotics', 'REV-21-1650', 'NEO Brushless Motor V1.1', 8, 0),
-('REV Robotics', 'REV-11-2158', 'SPARK MAX Motor Controller', 10, 0),
-('REV Robotics', 'REV-21-3005', 'MAXSwerve Module', 4, 0),
-('AndyMark', 'AM-0255', 'CIM Motor', 6, 0),
-('WCP', 'WCP-0940', 'Kraken X60 Brushless Motor', 8, 0),
-('Swerve Drive Specialties', 'SDS-MK4I-L2', 'MK4i Swerve Module L2', 4, 0);
+-- Örnek ürünler (fiyatlar örnektir). Bir kere çalıştırın, ikinci kez çalışırsa ürünler tekrar eklenir.
+INSERT INTO Urunler (Marka, UrunAdi, Adet, Fiyat) VALUES
+('REV Robotics', 'NEO Brushless Motor V1.1', 8, 0),
+('REV Robotics', 'SPARK MAX Motor Controller', 10, 0),
+('REV Robotics', 'MAXSwerve Module', 4, 0),
+('AndyMark', 'CIM Motor', 6, 0),
+('WCP', 'Kraken X60 Brushless Motor', 8, 0),
+('Swerve Drive Specialties', 'MK4i Swerve Module L2', 4, 0);
