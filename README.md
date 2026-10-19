@@ -43,4 +43,4 @@ Bunun için bilgisayarda Inno Setup 6 kurulu olmalı.
 | `kurulum\sihirbaz-*.bmp` | Kurulum sihirbazındaki logo resimleri |
 | `kurulum\logo.png` | Logonun orijinal resmi |
 | `veritabani.sql` | Veritabanı ve örnek veriler |
-| `Frcistan-Kod-Rehberi.pdf` | Hangi kodun nerede olduğunu anlatan rehber |
+| `Frcistan-0.1-Tanitim.pdf` | Programın tanıtım broşürü |
