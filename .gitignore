@@ -483,6 +483,5 @@ $RECYCLE.BIN/
 # Vim temporary swap files
 *.swp
 
-# Yayımlama ve kurulum çıktıları
+# Yayımlama çıktısı (kurulum-cikti klasörü depoda kalsın)
 publish/
-kurulum-cikti/
